@@ -1,0 +1,22 @@
+on boot
+    # Permissions for Liblights.
+    chown system system /sys/class/leds/pwr-red/use_pattern
+    chown system system /sys/class/leds/pwr-green/use_pattern
+    chown system system /sys/class/leds/pwr-blue/use_pattern
+    chown system system /sys/class/leds/l-key-red/use_pattern
+    chown system system /sys/class/leds/l-key-green/use_pattern
+    chown system system /sys/class/leds/l-key-blue/use_pattern
+    chown system system /sys/class/leds/m-key-red/use_pattern
+    chown system system /sys/class/leds/m-key-green/use_pattern
+    chown system system /sys/class/leds/m-key-blue/use_pattern
+    chown system system /sys/class/leds/r-key-red/use_pattern
+    chown system system /sys/class/leds/r-key-green/use_pattern
+    chown system system /sys/class/leds/r-key-blue/use_pattern
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/als_on
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/als_result
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/pattern_data
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/pattern_delay
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/pattern_duration_secs
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/pattern_use_softdim
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/dim_time
+
