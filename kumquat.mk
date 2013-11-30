@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
 
 # Netlink
 PRODUCT_PACKAGES += \
-    libnl
+    libnl_2
 
 # Dbus
 PRODUCT_PACKAGES += \
@@ -76,7 +76,8 @@ PRODUCT_PACKAGES += \
     hcitool \
     l2ping \
     hciattach \
-    rfcomm 
+    rfcomm \
+    btiotest
 
 # BT A2DP
 PRODUCT_PACKAGES += \
@@ -123,6 +124,10 @@ PRODUCT_PACKAGES += \
     libtinyalsa \
     audio_policy.default \
     audio.usb.default
+	
+# WiFi config utility
+PRODUCT_PACKAGES += \
+    iw
 
 # Permissions
 PRODUCT_COPY_FILES += \
