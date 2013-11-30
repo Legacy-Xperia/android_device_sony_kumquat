@@ -3,8 +3,11 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/sony/kumquat/BoardConfigVendor.mk
 
-TARGET_SPECIFIC_HEADER_PATH := \
-    device/sony/kumquat/include
+
+TARGET_SPECIFIC_HEADER_PATH := device/sony/kumquat/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/kumquat/hardware
+TARGET_SPECIFIC_HEADER_PATH += hardware/semc/bluetooth/glib
+TARGET_SPECIFIC_HEADER_PATH += hardware/semc/bluetooth/bluez/lib
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
