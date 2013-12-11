@@ -82,3 +82,7 @@ then
   chroot / /init
 
 fi
+
+# continue booting
+# allways remount system ro
+mount -o remount,ro /system

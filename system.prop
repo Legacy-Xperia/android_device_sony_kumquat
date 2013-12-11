@@ -10,15 +10,18 @@ ro.opengles.version=131072
 # debug.sf.hw=1 Use Mali as compositor in SurfaceFlinger
 debug.sf.hw=1
 
-# cm 11 bootloop fix
+# cm 11 bootloop fix. More info http://source.android.com/devices/tuning.html
 ro.zygote.disable_gl_preload=1
-ro.bq.gpu_to_cpu_unsupported=1
-debug.hwui.render_dirty_regions=false
+
+# deprecated mem heap based screen capture which is not needed for us
+#ro.bq.gpu_to_cpu_unsupported=1
 
 # Android defaults EGL preserved swap behaviour
 # This gives bad performace for deferred renderers
 # such as Mali.
 hwui.render_dirty_regions=false
+# disable dirty regions invalidation
+debug.hwui.render_dirty_regions=false
 
 # System props for SOLS
 ro.semc.sols.product-code=105
@@ -48,9 +51,9 @@ ste.video.dec.recycle.delay=1
 ste.special_fast_dormancy=false
 
 #Limitation on how much hwmem MM codecs should use
-ste.video.decoder.max.hwmem=0x3600000
-ste.video.decoder.max.res=1080p
-ste.video.decoder.h264.max.lev=4.2
+ste.video.decoder.max.hwmem=0x2600000
+ste.video.decoder.max.res=720p
+ste.video.decoder.h264.max.lev=3.2
 
 # System props for audio
 persist.audio.hp=true

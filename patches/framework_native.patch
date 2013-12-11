@@ -230,7 +230,7 @@ index 5c82330..105c5df 100644
  }; // namespace android
  
 diff --git a/frameworks/native/libs/gui/Android.mk b/frameworks/native/libs/gui/Android.mk
-index b42fa63..7f9ede5 100644
+index 14bf33a..8dc2e41 100644
 --- a/frameworks/native/libs/gui/Android.mk
 +++ b/frameworks/native/libs/gui/Android.mk
 @@ -39,6 +39,12 @@ LOCAL_SHARED_LIBRARIES := \
@@ -545,11 +545,11 @@ index 70d0e52..138f41e 100644
  
  EGL_ENTRY(EGLBoolean, eglHibernateProcessIMG, void)
 diff --git a/frameworks/native/services/surfaceflinger/Android.mk b/frameworks/native/services/surfaceflinger/Android.mk
-index 7b7a49b..51c2700 100644
+index fc6d0ff..6300a3b 100644
 --- a/frameworks/native/services/surfaceflinger/Android.mk
 +++ b/frameworks/native/services/surfaceflinger/Android.mk
-@@ -48,6 +48,10 @@ ifeq ($(TARGET_DISABLE_TRIPLE_BUFFERING),true)
- 	LOCAL_CFLAGS += -DTARGET_DISABLE_TRIPLE_BUFFERING
+@@ -52,6 +52,10 @@ ifeq ($(TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS),true)
+     LOCAL_CFLAGS += -DFORCE_HWC_COPY_FOR_VIRTUAL_DISPLAYS
  endif
  
 +ifeq ($(BOARD_EGL_NEEDS_LEGACY_FB),true)
@@ -587,7 +587,7 @@ index 5fa513c..69af894 100644
      int format;
      window->query(window, NATIVE_WINDOW_FORMAT, &format);
 diff --git a/frameworks/native/services/surfaceflinger/DisplayHardware/HWComposer.cpp b/frameworks/native/services/surfaceflinger/DisplayHardware/HWComposer.cpp
-index f9e619c..fc8a0d1 100644
+index eead7f1..57481b1 100644
 --- a/frameworks/native/services/surfaceflinger/DisplayHardware/HWComposer.cpp
 +++ b/frameworks/native/services/surfaceflinger/DisplayHardware/HWComposer.cpp
 @@ -628,7 +628,8 @@ void HWComposer::eventControl(int disp, int event, int enabled) {
@@ -601,7 +601,7 @@ index f9e619c..fc8a0d1 100644
          default:
              ALOGW("eventControl got unexpected event %d (disp=%d en=%d)",
 diff --git a/frameworks/native/services/surfaceflinger/SurfaceFlinger.cpp b/frameworks/native/services/surfaceflinger/SurfaceFlinger.cpp
-index 529461e..7ae858e 100644
+index fe25075..0db2fbe 100644
 --- a/frameworks/native/services/surfaceflinger/SurfaceFlinger.cpp
 +++ b/frameworks/native/services/surfaceflinger/SurfaceFlinger.cpp
 @@ -2771,6 +2771,7 @@ status_t SurfaceFlinger::onTransact(

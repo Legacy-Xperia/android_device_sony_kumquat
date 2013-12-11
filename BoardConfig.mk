@@ -3,11 +3,8 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/sony/kumquat/BoardConfigVendor.mk
 
-
-TARGET_SPECIFIC_HEADER_PATH := device/sony/kumquat/include
-TARGET_SPECIFIC_HEADER_PATH += device/sony/kumquat/hardware
-TARGET_SPECIFIC_HEADER_PATH += hardware/semc/bluetooth/glib
-TARGET_SPECIFIC_HEADER_PATH += hardware/semc/bluetooth/bluez/lib
+TARGET_SPECIFIC_HEADER_PATH := \
+    device/sony/kumquat/include
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
@@ -34,8 +31,6 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_STE := true
 COMMON_GLOBAL_CFLAGS += -DSTE_BT
-BOARD_BLUEDROID_VENDOR_CONF := device/sony/kumquat/hardware/bluetooth/vnd_u8500.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/kumquat/hardware/bluetooth/include
 
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
@@ -63,6 +58,9 @@ BOARD_HOSTAPD_PRIVATE_LIB := private_lib_nl80211_cmd
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/sony/kumquat/prebuilt/system/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DSTE_HARDWARE
+
+# kitkat
+BOARD_HAVE_PIXEL_FORMAT_INFO := true
 
 # libutils backward compatibility for hals
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
@@ -96,7 +94,7 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 
 # cwm specific
-RECOVERY_NAME := CWM-KUMQUAT
+RECOVERY_NAME := CWM-Kumquat
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/sony/kumquat/recovery/recovery-keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"lucidaconsole_10x18.h\"
 TARGET_RECOVERY_FSTAB = device/sony/kumquat/prebuilt/root/fstab.st-ericsson
