@@ -46,11 +46,6 @@ PRODUCT_PACKAGES += \
 # Glib
 PRODUCT_PACKAGES += \
     libglib
-
-# Hcidump
-PRODUCT_PACKAGES += \
-    hcidump
-
 # Libasound
 PRODUCT_PACKAGES += \
     libasound
@@ -72,15 +67,21 @@ PRODUCT_PACKAGES += \
 
 # Bluez 5.11 tools
 PRODUCT_PACKAGES += \
-    avinfo \
-    sdptool \
+    hciattach \
     hciconfig \
-    l2ping
+    hcitool \
+    hcidump \
+    rfcomm \
+    rctest \
+    l2test \
+    l2ping \
+    sdptool \
+    ciptool \
+    bccmd
 
-# BT A2DP
-PRODUCT_PACKAGES += \
-    libasound_module_ctl_bluetooth \
-    libasound_module_pcm_bluetooth
+# bt profile test (apk)
+#PRODUCT_PACKAGES += \
+#    BluetoothProfileTests
 
 # libaudioparameter
 PRODUCT_PACKAGES += \
@@ -133,7 +134,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
@@ -177,6 +177,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/etc/ril_config:system/etc/ril_config \
     $(LOCAL_PATH)/prebuilt/system/bin/install_wlan:system/bin/install_wlan \
     $(LOCAL_PATH)/prebuilt/system/etc/ste_modem.sh:system/etc/ste_modem.sh
+
+# New wifi firmwares
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/sdd_sagrad_1091_1098.bin:system/etc/firmware/sdd_sagrad_1091_1098.bin \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/wsm_22.bin:system/etc/firmware/wsm_22.bin \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/LICENCE.cw1200:system/etc/firmware/LICENCE.cw1200
 
 # WiFi config utility
 PRODUCT_PACKAGES += \
