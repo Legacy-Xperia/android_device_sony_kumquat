@@ -1,5 +1,6 @@
 bin/admsrv
 bin/at_core
+bin/batcap
 bin/blue-up.sh
 bin/cg2900-channel_init.sh
 bin/chargemon
@@ -99,7 +100,6 @@ lib/libarchive.so
 lib/libarchive_fe.so
 lib/libaudiopolicy.so
 lib/libbassapp.so
-lib/libbluedroid.so
 lib/libcald_client.so
 lib/libcald_hal.so
 lib/libcald_imageutil.so
