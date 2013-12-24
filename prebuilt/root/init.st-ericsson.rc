@@ -27,9 +27,8 @@ on early-init
 
 on init
     # setup the global environment
-    export LD_LIBRARY_PATH /system/lib:/lib:/usr/lib:/system/lib/ste_omxcomponents:/vendor/lib
     export OMX_STE_ENS_COMPONENTS_DIR /system/lib/ste_omxcomponents/
-    export OMX_BELLAGIO_LOADER_REGISTRY /system/omxloaders
+    export OMX_BELLAGIO_LOADER_REGISTRY /system/etc/omxloaders
 
     mkdir /modemfs 0771 system system
 
@@ -320,10 +319,6 @@ on boot
     # Permissions for LM3560 flash LED
     chown system system /sys/bus/i2c/devices/2-0053/privacy_enable
     chown system system /sys/bus/i2c/devices/2-0053/privacy_current
-
-    # NFC
-    chown nfc nfc /dev/pn544
-    chmod 0600 /dev/pn544
 
     # SEMC: USB Host support
     mkdir /dev/bus/ 0711 system system
