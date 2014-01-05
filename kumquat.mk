@@ -57,6 +57,7 @@ PRODUCT_PACKAGES += \
 
 # Bluez 5.11 daemon, android hal and haltest
 PRODUCT_PACKAGES += \
+    audio.a2dp.default \
     bluetoothd \
     bluetooth.default \
     haltest

@@ -531,7 +531,7 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
 
 service dhcpcd_fix /system/bin/rm /data/misc/dhcp/*
     user root
-	group root system dhcp
+    group root system dhcp
     disabled
     oneshot
 
@@ -718,14 +718,3 @@ service suntrold /system/bin/suntrold
 service xssm /system/bin/xssm
     class main
     socket xssm stream 0660 root system
-
-#service logcat /system/bin/logcat -r 1000 -v long -f /sde/logcat.log
-    #class main
-    #user system
-    #group system
-    #oneshot
-
-#service illumination /system/bin/illumination_service
-    #socket illumination stream 0660 root system
-    #class main
-    #user root
