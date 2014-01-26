@@ -50,17 +50,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libasound
 
-# Bluez 5.11 libs
+# Bluez
 PRODUCT_PACKAGES += \
     libbtio \
     libbluetooth
 
 # Bluez 5.11 daemon, android hal and haltest
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    bluetoothd \
-    bluetooth.default \
-    haltest
+     bluetoothd \
+     bluetooth.default \
+     audio.a2dp.default \
+     haltest
 
 # Bluez 5.11 btmon
 PRODUCT_PACKAGES += \
@@ -76,9 +76,6 @@ PRODUCT_PACKAGES += \
     rctest \
     l2test \
     l2ping \
-    sdptool \
-    ciptool \
-    bccmd
 
 # bt profile test (apk)
 #PRODUCT_PACKAGES += \
