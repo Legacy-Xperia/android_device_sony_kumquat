@@ -82,6 +82,10 @@
 
 # Bluetooth
 /sys/devices/platform/cg2900.0/cg2900-uart.0/bluetooth/hci0/rfkill* state	 0666 root bluetooth
+/dev/uinput               0660   system     bluetooth
+/dev/ttyAMA0              0660   bluetooth  bluetooth
+/dev/ttyAMA1              0660   bluetooth  bluetooth
+/dev/ttyAMA2              0660   bluetooth  bluetooth
 
 # STE CG2900
 /dev/cg2900_bt_audio      0660   system     system
