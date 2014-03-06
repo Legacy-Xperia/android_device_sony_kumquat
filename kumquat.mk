@@ -272,11 +272,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
+<<<<<<< HEAD:kumquat.mk
     sys.mem.max_hidden_apps=10 \
     persist.sys.usb.config=mtp \
     wifi.interface=wlan0 \
-    ro.sf.lcd_density=240
+    ro.sf.lcd_density=240 \
+    ro.com.google.clientidbase.ms=android-sonymobile
 
 #512MB ram devices(https://source.android.com/devices/low-ram.html)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.low_ram=false
+    ro.config.low_ram=true
