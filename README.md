@@ -3,7 +3,14 @@ android_device_sony_kumquat
 
 CyanogenMod 11.0 Device tree for Sony Xperia U
 
-New Patches Path [Maintained by munjeni]
+
+
+Getting Started :
+
+    mkdir cm-11.0
+    cd cm-11.0
+    repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
+    repo sync -j16
 
 Patch android source code :
 
@@ -42,4 +49,21 @@ Our step is optional!!! Use only if you going to sync CM 11 source code daily, t
     patch -p1 < hardware/semc/patches/bootable_recovery.patch
     patch -p1 < hardware/semc/patches/external_bluetooth_bluedroid.patch
     patch -p1 < hardware/semc/patches/packages_apps_Bluetooth.patch
+
+
+Download CM prebuilts [Needed Only once] :
+
+   cd vendor/cm && ./get-prebuilts && cd ../..
+   
+You are ready to build :
+
+    . build/envsetup.sh
+    brunch kumquat
+
+
+Credits:- Munjeni , Joise87 , 95A31 , mike(semc-2011 DEV) , Gava97 ,Andrewasth ,areshinakya ,FXP Team , CyanogenMod , Sony , Devswift1 and Paul.L for early help in cm-10.1 and Users ;)
+
+
+ENJOY! 
+
 
