@@ -272,7 +272,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-<<<<<<< HEAD:kumquat.mk
     sys.mem.max_hidden_apps=10 \
     persist.sys.usb.config=mtp \
     wifi.interface=wlan0 \
